@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+    <link rel="stylesheet" href = "mainpage.css">
+    <link rel="stylesheet" href="https://use.typekit.net/jfv8ayp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+           #headerBar{
+
+            margin:auto;
+
+           }
+        </style>
+    </head>
+
+<body >
+    <header id="heading">
+        <div id="headerNav">
+            <h1 onclick="link('index.html')"class="headerBarText">Futur3 Star</h1>
+            </div>
+            <div id="headerBar">
+            <ul id="headerTitles">
+                
+                <a  class="aboutUs" href="#">About
+                    <div class="mainPageAboutUS">
+                    <li onclick="link('aboutFutureStar.html')" class="headerColumn">What do we do</li>
+                    <li onclick="link('ourTeam.html')"class="headerColumn">Our Team</li>
+                </div>
+            
+            </a>
+                
+
+                
+                <a class="aboutUs" href="#">About
+                    <div class="mainPageAboutUS">
+                    <li class="headerColumn">What do we do</li>
+                    <li class="headerColumn">Our Technology</li>
+                </div>
+            
+            </a>
+                
+
+                
+                <a class="aboutUs" href="#">Recent News
+                    <div class="mainPageAboutUS">
+                    <li class="headerColumn">What do we do</li>
+                    <li class="headerColumn">Our Technology</li>
+                </div>
+            
+            </a>
+                
+
+                
+                    <a class="aboutUs" href="#">Our Youth
+                        <div class="mainPageAboutUS">
+                        <li class="headerColumn">What do we do</li>
+                        <li class="headerColumn">Our Technology</li>
+                    </div>
+                
+                </a>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="mobile()">
+                <i class="fa fa-bars"></i>
+              </a>
+        </div>
+                
+            
+    </header>
+
+    <script>
+
+    function link(link){
+
+        window.location = (link);
+
+    };
+
+        var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+        document.getElementById("heading").style.top = "0";
+    } else {
+        document.getElementById("heading").style.top = "-50px";
+    }
+  prevScrollpos = currentScrollPos;
+}
+    </script>
+
+    <script>
+        function mobile() {
+        var x = document.getElementById("headerTitles");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+         x.style.display = "block";
+        }     
+        }
+    </script>
+
+        <h1 id="introText">
+                A great team is ensured to create the technology for the next generation
+        </h1>
+            <a href="aboutFutureStar.html" class="introText" id ="subIntro"> Explore and see what we do</p>
+
+    <footer>
+        <div>
+
+            <ul>
+            <a href="#">Bulbapp</a>
+            <a href="#">youtube</a>
+            
+            </ul>
+        </div>
+
+    </footer>
+    
+        
+        
+    </body>
+
+</html>

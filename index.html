@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+    <link rel="stylesheet" href = "mainpage.css">
+    <link rel="stylesheet" href="https://use.typekit.net/jfv8ayp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+           #headerBar{
+
+            margin:auto;
+
+
+           }
+           .dark-mode {
+  background-color: black;
+  color: white;
+}
+        </style>
+    </head>
+
+<body style="background-color: black;">
+    <header id="heading">
+        <div id="headerNav">
+            <h1 onclick="link('index.html')" id="mainTitle"class="headerBarText">Futur3 Star</h1>
+            </div>
+            <div id="headerBar">
+            <ul id="headerTitles">
+                
+                <a  class="aboutUs" onmouseover="colorDecide()" href="#">About
+                    <div class="mainPageAboutUS">
+                    <li onclick="link('aboutFutureStar.html')" class="headerColumn">What do we do</li>
+                    <li onclick="link('ourTeam.html')"class="headerColumn">Our Team</li>
+                </div>
+            
+            </a>
+                
+
+                
+                <a class="aboutUs" onmouseover="colorDecide()" href="#">About
+                    <div class="mainPageAboutUS">
+                    <li class="headerColumn">What do we do</li>
+                    <li class="headerColumn">Our Technology</li>
+                </div>
+            
+            </a>
+                
+
+                
+                <a class="aboutUs"onmouseover="colorDecide()"  href="#">Recent News
+                    <div class="mainPageAboutUS">
+                    <li class="headerColumn">What do we do</li>
+                    <li class="headerColumn">Our Technology</li>
+                </div>
+            
+            </a>
+                
+
+                
+                    <a class="aboutUs" onmouseover="colorDecide()" href="#">Our Youth
+                        <div class="mainPageAboutUS">
+                        <li class="headerColumn">What do we do</li>
+                        <li class="headerColumn">Our Technology</li>
+                    </div>
+                
+                </a>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="mobile()">
+                <i class="fa fa-bars"></i>
+              </a>
+            <label class="switch">
+             <input type="checkbox" onclick="invert()">
+             <span class="slider" ></span>
+            </label>
+        </div>
+                
+            
+    </header>
+
+    <script>
+
+        function colorDecide(){
+
+            var element = document.body;
+            var menuBars = document.getElementsByClassName("aboutUs");
+
+            if(element.style.backgroundColor == "black"){
+   
+   for(var i = 0; i < menuBars.length; i++){
+   menuBars[i].style.backgroundColor = "black";
+   menuBars[i].style.color = "white";
+}
+
+}  
+else{
+
+for(var i = 0; i < menuBars.length; i++){
+    menuBars[i].style.backgroundColor = "white";
+   menuBars[i].style.color = "black";
+}
+
+}
+
+        };
+
+    </script>
+
+    <script>
+
+function invert(){
+
+var element = document.body;
+var header = document.getElementById("heading");
+var title = document.getElementById("mainTitle");
+var subTitle = document.getElementById("subIntro");
+var menuBars = document.getElementsByClassName("aboutUs");
+
+
+
+if(element.style.backgroundColor == "black"){
+   element.style.backgroundColor = "white";
+   header.style.backgroundColor="black";
+   subTitle.style.filter = "invert(1)";
+   title.style.filter = "invert(1)";
+   subTitle.style.animation="appear 2s 1";
+   
+
+   for(var i = 0; i < menuBars.length; i++){
+   menuBars[i].style.backgroundColor= "black";
+   menuBars[i].style.color="white";
+   
+   
+  
+
+
+}
+
+}  else{
+
+element.style.backgroundColor ="black";
+header.style.backgroundColor="white";
+title.style.filter="invert(0)";
+subTitle.style.filter="invert(0)";
+
+
+for(var i = 0; i < menuBars.length; i++){
+   menuBars[i].style.backgroundColor= "white";
+   menuBars[i].style.color="black";
+   
+
+}
+
+}
+
+};
+
+    </script>
+
+    <script>
+
+    function link(link){
+
+        window.location = (link);
+
+    };
+
+    
+
+        var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+        document.getElementById("heading").style.top = "0";
+    } else {
+        document.getElementById("heading").style.top = "-50px";
+    }
+  prevScrollpos = currentScrollPos;
+}
+    </script>
+
+    <script>
+        function mobile() {
+        var x = document.getElementById("headerTitles");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+         x.style.display = "block";
+        }     
+        }
+    </script>
+
+        <h1 class="introText" id="title">
+                Welcome to the furture
+        </h1>
+            <a href="aboutFutureStar.html" class="introText" id ="subIntro"> Explore and see what we do</p>
+
+    <footer>
+        <div>
+
+            <ul>
+            <a href="#">Bulbapp</a>
+            <a href="#">youtube</a>
+            
+            </ul>
+        </div>
+
+    </footer>
+    
+        
+        
+    </body>
+
+</html>
